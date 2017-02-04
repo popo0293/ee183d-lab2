@@ -10,8 +10,7 @@
 
 ## Setup Arduino IDE Environment
 
-http://www.instructables.com/id/Programming-the-ESP8266-12E-using-Arduino-software/
-?ALLSTEPS
+http://www.instructables.com/id/Programming-the-ESP8266-12E-using-Arduino-software/?ALLSTEPS
 
 drivers for all OSes can be found here:
 https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx
@@ -21,6 +20,8 @@ Upload Speed 115200
 Programmer: AVRISP mkll
 
 To get yourself familiar with the modules, you may start with uploading modular test programs I included:
+
 Blink_esp8266
-BlinkWithWifi_esp8266 (http://www.instructables.com/id/Programming-a-HTTP-Server-on-ESP-8266-12E/?ALLSTEPS)
-ServoTest_esp8266
+BlinkWithWifi_esp8266 
+(http://www.instructables.com/id/Programming-a-HTTP-Server-on-ESP-8266-12E/?ALLSTEPS)
+And ServoTest_esp8266
