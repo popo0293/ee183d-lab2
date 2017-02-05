@@ -31,7 +31,10 @@ Programmer: AVRISP mkll
 Before you go to the final code, you may start with modular programs I included if you are not familiar with them:
 
 Blink_esp8266
+
 BlinkWithWifi_esp8266 
 (http://www.instructables.com/id/Programming-a-HTTP-Server-on-ESP-8266-12E/?ALLSTEPS)
+
 ServoTest_esp8266
+
 InterruptTest_esp8266
