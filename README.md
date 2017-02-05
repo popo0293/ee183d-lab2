@@ -14,7 +14,7 @@ This project uses two servos to play music! One plucks a string, and the other a
 
 ## Setup Arduino IDE Environment with esp8266-12e board
 
-To get familiar with esp8266, you may view the esp8266-12e-quick.pdf provided by UCLA Prof. Mehta.
+To get familiar with esp8266, you may view esp8266-12e-quick.pdf provided by UCLA Prof. Mehta. That's how I did.
 
 Here are some key links from the pdf.
 http://www.instructables.com/id/Programming-the-ESP8266-12E-using-Arduino-software/?ALLSTEPS
@@ -23,7 +23,9 @@ drivers for all OSes can be found here:
 https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx
 
 Pick Board: "Node MCU 1.0 (ESP-12 Module)"
-Upload Speed 115200
+
+Upload Speed: 115200
+
 Programmer: AVRISP mkll
 
 ## Understand building blocks
