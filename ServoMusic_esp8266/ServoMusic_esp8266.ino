@@ -1,5 +1,9 @@
 #include <ESP8266WiFi.h>
 #include <Servo.h>
+#include "user_interface.h"
+os_timer_t myTimer;
+bool tickOccured;
+bool dir;
 
 Servo myservo;
 WiFiServer server(80); //Initialize the server on Port 80
@@ -7,7 +11,20 @@ const short int LED_PIN = 16;//GPIO16
 int angle;
 int endpoint;
 
+void timerCallback(void *pArg) {
+      tickOccured = true;
+      if(dir){
+        dir = false;
+        myservo.write(180-angle);}
+      else{
+        dir = true;
+        myservo.write(angle);}
+}
 
+void user_init(void) {
+      os_timer_setfn(&myTimer, timerCallback, NULL);
+      os_timer_arm(&myTimer, 200, true);
+}
 
 void setup() {
   WiFi.mode(WIFI_AP); //Our ESP8266-12E is an AccessPoint
@@ -26,8 +43,17 @@ void setup() {
   angle = 90;
   endpoint = 0;
   myservo.write(angle);
+  tickOccured = false;
+  dir = true;
+  user_init();
 }
 void loop() {
+   if (tickOccured == true)
+  {
+    Serial.println("Tick Occurred");
+    tickOccured = false;
+   }
+  
   WiFiClient client = server.available();
   if (!client) {
     return;
