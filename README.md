@@ -1,3 +1,6 @@
+by Yichen Wu
+UCLA UID:504294181
+
 ## Introduction
 
 This project uses two servos to play music! One plucks a steel ruler, and the other adjust the length of ruler being plucked to control tone.
